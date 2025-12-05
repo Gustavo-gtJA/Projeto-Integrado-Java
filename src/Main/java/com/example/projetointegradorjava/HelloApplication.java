@@ -2,6 +2,7 @@ package com.example.projetointegradorjava;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
@@ -11,7 +12,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
-
 
 
     TextField textField;
@@ -25,12 +25,11 @@ public class HelloApplication extends Application {
         //stage.show();
 
 
-        stage.setHeight(550);
-        stage.setWidth(550);
+        stage.setWidth(600);
         stage.setOnCloseRequest(e -> {
-            fechar();
             e.consume();
         });
+        stage.setResizable(false);
 
         VBox root = new VBox();
         Scene scene = new Scene(root);
@@ -41,13 +40,17 @@ public class HelloApplication extends Application {
 
 
         VBox listaDeVeiculos = new VBox();
-        Label labelLista  = new Label("Lista de Veículos");
+        Label labelLista = new Label("Lista de Veículos");
+        labelLista.setStyle("-fx-font-size: 20");
+        labelLista.setPadding(new Insets(10, 0, 5, 35));
         listaDeVeiculos.getChildren().add(labelLista);
 
         ListView tabelaVeiculos = new ListView();
         tabelaVeiculos.setPrefHeight(200);
         tabelaVeiculos.setPrefWidth(200);
+        tabelaVeiculos.setPadding(new Insets(10, 10, 10, 10));
         listaDeVeiculos.getChildren().add(tabelaVeiculos);
+        listaDeVeiculos.setSpacing(15);
 
 
         HBox hBoxPrincipal = new HBox();
@@ -56,6 +59,8 @@ public class HelloApplication extends Application {
 
         //Tabela de butões
         VBox vBoxButton = new VBox();
+        vBoxButton.setSpacing(20);
+        vBoxButton.setPadding(new Insets(90, 0, 0, 70));
 
         Button registrarEntrada = new Button("Registrar entrada");
         vBoxButton.getChildren().add(registrarEntrada);
@@ -65,6 +70,7 @@ public class HelloApplication extends Application {
 
         hBoxPrincipal.getChildren().add(vBoxButton);
 
+        //setando butões
 
 
         //MOSTRAR
@@ -75,16 +81,6 @@ public class HelloApplication extends Application {
         stage.show();
 
 
-
-
-    }
-
-    public void fechar() {
-        Alert alertaFechar = new Alert(
-                Alert.AlertType.CONFIRMATION,
-                "Confirna a saida do sistema?",
-                ButtonType.YES,
-                ButtonType.NO
-        );
     }
 }
+
