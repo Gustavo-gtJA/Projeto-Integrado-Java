@@ -1,5 +1,8 @@
 package com.example.projetointegradorjava;
 
+import com.example.projetointegradorjava.model.VeiculoRegistro;
+import com.example.projetointegradorjava.model.VeiculoRegistro;
+import com.example.projetointegradorjava.model.repository.VeiculoRepository;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -9,6 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class HelloApplication extends Application {
 
@@ -17,7 +21,6 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-
 
 
         stage.setWidth(600);
@@ -88,17 +91,21 @@ public class HelloApplication extends Application {
             //Butões
             HBox hboxButoes = new HBox();
             Button botaoResgistrar = new Button("Registrar");
+            botaoResgistrar.setOnAction(actionEvent -> {
+
+
+            });
+
+
             Button botaoVoltar = new Button("Voltar");
-            botaoVoltar.setOnAction(event-> {
+            botaoVoltar.setOnAction(event -> {
                 novaJanela.close();
             });
 
             hboxButoes.getChildren().addAll(botaoVoltar, botaoResgistrar);
 
 
-
             centralizador.getChildren().addAll(placa, modelo, proprietario, hboxButoes);
-
 
 
             novaJanela.setScene(cena);
@@ -106,9 +113,7 @@ public class HelloApplication extends Application {
 
             root2.getChildren().add(centralizador);
             novaJanela.show();
-                });
-
-
+        });
 
 
         // Tela Registrar saída
@@ -145,7 +150,6 @@ public class HelloApplication extends Application {
             botaosaida.getChildren().addAll(botaoregistrarSaida, voltarSaida);
 
 
-
             telaSaida.setScene(cena);
             telaSaida.setTitle("Registrar Saída");
             centralizadorSaida.getChildren().addAll(placaSaida, modeloSaida, proprietarioSaida);
@@ -153,11 +157,7 @@ public class HelloApplication extends Application {
             telaSaida.show();
 
 
-
         });
-
-
-
 
 
         vBoxButton.getChildren().addAll(registrarEntrada, registrarSaida);
@@ -172,8 +172,12 @@ public class HelloApplication extends Application {
 
 
 
-    //mOSTRAR TELA2
+    }
 
 
-}
+
+
+
+
+
 

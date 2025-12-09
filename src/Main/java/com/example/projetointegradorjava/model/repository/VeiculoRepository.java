@@ -1,0 +1,54 @@
+package com.example.projetointegradorjava.model.repository;
+
+import com.example.projetointegradorjava.model.VeiculoRegistro;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.List;
+
+public class VeiculoRepository {
+
+    public VeiculoRegistro veiculoRegistro;
+    private Path arquivo = Paths.get("/Users/25203634/Arquivo/dados.csv");
+
+    public void gravar(){
+        try {
+            Files.writeString(arquivo, veiculoRegistro.separarDadosContato(), StandardOpenOption.APPEND);
+            System.out.println("Contato gravado com sucesso!");
+        } catch (IOException erro) {
+            erro.printStackTrace();
+        }
+
+    }
+
+    public void exibirContato(){
+        try {
+            List<String> linhas = Files.readAllLines(arquivo);
+
+            for(String linha : linhas){
+                String[] linhaContato = linha.split(";");
+                System.out.println("Nome: "+ linhaContato[1]);
+                System.out.println("Telefone: "+ linhaContato[2]);
+                System.out.println("Email: "+ linhaContato[3]);
+                System.out.println("-----------------------------------");
+
+                System.out.println(linha);
+            }
+// exemplo com while
+            //int contador = 0;
+            // while(contador<linhas.size()){
+            //     System.out.println(linhas.get(contador));
+            //     contador++;
+            //  }
+            System.out.println("Contato exibido com sucesso!");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+}
