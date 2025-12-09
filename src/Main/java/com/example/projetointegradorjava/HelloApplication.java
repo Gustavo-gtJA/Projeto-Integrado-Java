@@ -61,6 +61,7 @@ public class HelloApplication extends Application {
         Button registrarEntrada = new Button("Registrar Entrada");
 
         registrarEntrada.setOnAction(e -> {
+
             //Tela RegistrarEntrada
 
             TextField placa;
@@ -72,8 +73,8 @@ public class HelloApplication extends Application {
             Stage novaJanela = new Stage();
             novaJanela.setResizable(false);
 
-            VBox root2 = new VBox(new Button("Sou outra janela!"));
-            Scene cena = new Scene(root2, 250, 150);
+            VBox root2 = new VBox();
+            Scene cena = new Scene(root2, 500, 500);
 
             VBox centralizador = new VBox();
 
@@ -84,7 +85,19 @@ public class HelloApplication extends Application {
             modelo = new TextField();
             proprietario = new TextField();
 
-            centralizador.getChildren().addAll(placa, modelo, proprietario);
+            //Butões
+            HBox hboxButoes = new HBox();
+            Button botaoResgistrar = new Button("Registrar");
+            Button botaoVoltar = new Button("Voltar");
+            botaoVoltar.setOnAction(event-> {
+                novaJanela.close();
+            });
+
+            hboxButoes.getChildren().addAll(botaoVoltar, botaoResgistrar);
+
+
+
+            centralizador.getChildren().addAll(placa, modelo, proprietario, hboxButoes);
 
 
 
@@ -95,24 +108,59 @@ public class HelloApplication extends Application {
             novaJanela.show();
                 });
 
-        // vBoxButton.setSpacing(20);
-        //vBoxButton.setPadding(new Insets(90, 0, 0, 70));
-
-       // Button registrarEntrada = new Button("Registrar entrada");
-        vBoxButton.getChildren().add(registrarEntrada);
-
-        //Button registrarSaida = new Button("Registrar Saida e pagamento");
-        //vBoxButton.getChildren().add(registrarSaida);
-
-        //hBoxPrincipal.getChildren().add(vBoxButton);
-
-        //setando butões
 
 
-        //MOSTRAR
 
-        //Scene Registrar entrada
+        // Tela Registrar saída
 
+        Button registrarSaida = new Button("Registrar Saida");
+
+        registrarSaida.setOnAction(e -> {
+
+            TextField placaSaida;
+            TextField modeloSaida;
+            TextField proprietarioSaida;
+            Button botaoregistrarSaida;
+            Button voltarSaida;
+
+            Stage telaSaida = new Stage();
+            telaSaida.setResizable(false);
+
+            HBox root3 = new HBox();
+            Scene cena = new Scene(root3, 500, 500);
+
+            VBox centralizadorSaida = new VBox();
+
+            placaSaida = new TextField();
+            modeloSaida = new TextField();
+            proprietarioSaida = new TextField();
+
+            VBox botaosaida = new VBox();
+            botaoregistrarSaida = new Button("Registrar Saida");
+            voltarSaida = new Button("Voltar");
+            voltarSaida.setOnAction(event -> {
+                telaSaida.close();
+            });
+
+            botaosaida.getChildren().addAll(botaoregistrarSaida, voltarSaida);
+
+
+
+            telaSaida.setScene(cena);
+            telaSaida.setTitle("Registrar Saída");
+            centralizadorSaida.getChildren().addAll(placaSaida, modeloSaida, proprietarioSaida);
+            root3.getChildren().addAll(centralizadorSaida, botaosaida);
+            telaSaida.show();
+
+
+
+        });
+
+
+
+
+
+        vBoxButton.getChildren().addAll(registrarEntrada, registrarSaida);
         root.getChildren().add(hBoxPrincipal);
         root.getChildren().add(vBoxButton);
 
@@ -122,22 +170,7 @@ public class HelloApplication extends Application {
 
     }
 
-    public void criarTela2(Stage stage2) {
 
-        stage2.setWidth(600);
-        stage2.setOnCloseRequest(e -> {
-            e.consume();
-        });
-        stage2.setResizable(false);
-
-        //Scene Menu
-
-        VBox root2 = new VBox();
-        Scene scene2 = new Scene(root2);
-        stage2.setScene(scene2);
-        stage2.setTitle("Olá!");
-
-    }
 
     //mOSTRAR TELA2
 
