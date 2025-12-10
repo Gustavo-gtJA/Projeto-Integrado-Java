@@ -1,8 +1,6 @@
 package com.example.projetointegradorjava;
 
-import com.example.projetointegradorjava.model.VeiculoRegistro;
-import com.example.projetointegradorjava.model.VeiculoRegistro;
-import com.example.projetointegradorjava.model.repository.VeiculoRepository;
+import com.example.projetointegradorjava.model.LeituraEscrita;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -12,7 +10,8 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Scanner;
+
+import static com.example.projetointegradorjava.model.LeituraEscrita.LeituraEscritaF;
 
 public class HelloApplication extends Application {
 
@@ -65,13 +64,14 @@ public class HelloApplication extends Application {
 
         registrarEntrada.setOnAction(e -> {
 
+
+
             //Tela RegistrarEntrada
 
-            TextField placa;
-            TextField modelo;
-            TextField proprietario;
-            Button registrar;
-            Button voltar;
+            TextField textFildPlaca;
+            TextField textfieldModelo;
+            TextField textfieldProprietario;
+
 
             Stage novaJanela = new Stage();
             novaJanela.setResizable(false);
@@ -84,16 +84,16 @@ public class HelloApplication extends Application {
             //Text Field
 
 
-            placa = new TextField();
-            modelo = new TextField();
-            proprietario = new TextField();
+            textFildPlaca = new TextField();
+            textfieldModelo = new TextField();
+            textfieldProprietario = new TextField();
 
-            //Butões
+            //Butões da tela Registrar Entrada
             HBox hboxButoes = new HBox();
-            Button botaoResgistrar = new Button("Registrar");
-            botaoResgistrar.setOnAction(actionEvent -> {
+            Button botaoRegistrar = new Button("Registrar");
+            botaoRegistrar.setOnAction(actionEvent -> {
 
-
+                LeituraEscritaF();
             });
 
 
@@ -102,10 +102,10 @@ public class HelloApplication extends Application {
                 novaJanela.close();
             });
 
-            hboxButoes.getChildren().addAll(botaoVoltar, botaoResgistrar);
+            hboxButoes.getChildren().addAll(botaoVoltar, botaoRegistrar);
 
 
-            centralizador.getChildren().addAll(placa, modelo, proprietario, hboxButoes);
+            centralizador.getChildren().addAll(textFildPlaca, textfieldModelo, textfieldProprietario, hboxButoes);
 
 
             novaJanela.setScene(cena);
@@ -113,8 +113,8 @@ public class HelloApplication extends Application {
 
             root2.getChildren().add(centralizador);
             novaJanela.show();
-        });
 
+        });
 
         // Tela Registrar saída
 
@@ -132,7 +132,7 @@ public class HelloApplication extends Application {
             telaSaida.setResizable(false);
 
             HBox root3 = new HBox();
-            Scene cena = new Scene(root3, 500, 500);
+            Scene cenaSaida = new Scene(root3, 500, 500);
 
             VBox centralizadorSaida = new VBox();
 
@@ -150,7 +150,7 @@ public class HelloApplication extends Application {
             botaosaida.getChildren().addAll(botaoregistrarSaida, voltarSaida);
 
 
-            telaSaida.setScene(cena);
+            telaSaida.setScene(cenaSaida);
             telaSaida.setTitle("Registrar Saída");
             centralizadorSaida.getChildren().addAll(placaSaida, modeloSaida, proprietarioSaida);
             root3.getChildren().addAll(centralizadorSaida, botaosaida);
