@@ -7,10 +7,10 @@ public class VeiculoRegistro {
         public String proprietario;
 
 
-        public String separarDadosContato(){
+        public String separarDadosVeiculo(){
 
-                String contatoSeparado = placa + ";" + modelo + ";" + proprietario + ";"  + "\n";
-                return contatoSeparado;
+                String veiculoSeparado = placa + ";" + modelo + ";" + proprietario + ";"  + "\n";
+                return veiculoSeparado;
         }
 }
 

@@ -6,6 +6,7 @@ import com.example.projetointegradorjava.model.VeiculoRegistro;
 import com.example.projetointegradorjava.model.repository.VeiculoRepository;
 import javafx.application.Application;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class LeituraEscrita {
@@ -16,12 +17,11 @@ public class LeituraEscrita {
         VeiculoRegistro veiculoRegistro = new VeiculoRegistro();
 
 
+
         VeiculoRepository veiculoRepository = new VeiculoRepository();
-
-
         veiculoRepository.veiculoRegistro = veiculoRegistro;
         veiculoRepository.gravar();
-        veiculoRepository.exibirContato();
+        veiculoRepository.exibirVeiculo();
 
     }
 

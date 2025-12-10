@@ -11,15 +11,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import static com.example.projetointegradorjava.model.LeituraEscrita.LeituraEscritaF;
-
 public class HelloApplication extends Application {
 
 
-    TextField textField;
+
 
     @Override
     public void start(Stage stage) throws IOException {
+
+
 
 
         stage.setWidth(600);
@@ -68,9 +68,6 @@ public class HelloApplication extends Application {
 
             //Tela RegistrarEntrada
 
-            TextField textFildPlaca;
-            TextField textfieldModelo;
-            TextField textfieldProprietario;
 
 
             Stage novaJanela = new Stage();
@@ -82,6 +79,9 @@ public class HelloApplication extends Application {
             VBox centralizador = new VBox();
 
             //Text Field
+            TextField textFildPlaca;
+            TextField textfieldModelo;
+            TextField textfieldProprietario;
 
 
             textFildPlaca = new TextField();
@@ -93,7 +93,7 @@ public class HelloApplication extends Application {
             Button botaoRegistrar = new Button("Registrar");
             botaoRegistrar.setOnAction(actionEvent -> {
 
-                LeituraEscritaF();
+                LeituraEscrita.LeituraEscritaF();
             });
 
 

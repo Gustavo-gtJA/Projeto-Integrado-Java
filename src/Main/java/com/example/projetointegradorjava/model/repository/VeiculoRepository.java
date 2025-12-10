@@ -13,11 +13,11 @@ public class VeiculoRepository {
 
     public VeiculoRegistro veiculoRegistro;
 
-    private Path arquivo = Paths.get("/Users/25203634/Documents/teste/dados.csv");
+    public Path arquivo = Paths.get("/Users/25203634/Documents/teste/dados.csv");
 
     public void gravar(){
         try {
-            Files.writeString(arquivo, veiculoRegistro.separarDadosContato(), StandardOpenOption.APPEND);
+            Files.writeString(arquivo, veiculoRegistro.separarDadosVeiculo(), StandardOpenOption.APPEND);
             System.out.println("Contato gravado com sucesso!");
         } catch (IOException erro) {
             erro.printStackTrace();
@@ -25,18 +25,18 @@ public class VeiculoRepository {
 
     }
 
-    public void exibirContato(){
+    public void exibirVeiculo(){
         try {
             List<String> linhas = Files.readAllLines(arquivo);
 
             for(String linha : linhas){
-                String[] linhaContato = linha.split(";");
-                System.out.println("Placa: "+ linhaContato[1]);
-                System.out.println("Telefone: "+ linhaContato[2]);
-                System.out.println("Email: "+ linhaContato[3]);
+                String[] linhaRegistro = linha.split(";");
+                System.out.println("Placa: " + linhaRegistro[1]);
+                System.out.println("Veículo: " + linhaRegistro[2]);
+                System.out.println("Proprietário: " + linhaRegistro[3]);
                 System.out.println("-----------------------------------");
 
-                System.out.println(linha);
+
             }
 
             System.out.println("Contato exibido com sucesso!");
