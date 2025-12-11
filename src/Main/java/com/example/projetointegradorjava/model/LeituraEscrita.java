@@ -15,13 +15,29 @@ public class LeituraEscrita {
 
 
         VeiculoRegistro veiculoRegistro = new VeiculoRegistro();
+        HelloApplication helloApplication = new HelloApplication();
+
+
+        veiculoRegistro.placa = helloApplication.textPlaca;
+        veiculoRegistro.modelo = helloApplication.textModelo;
+        veiculoRegistro.proprietario = helloApplication.textProprietario;
+
+
+
+        System.out.println(veiculoRegistro.placa);
+        System.out.println(veiculoRegistro.modelo);
+        System.out.println(veiculoRegistro.proprietario);
+
+
+
+
 
 
 
         VeiculoRepository veiculoRepository = new VeiculoRepository();
         veiculoRepository.veiculoRegistro = veiculoRegistro;
         veiculoRepository.gravar();
-        veiculoRepository.exibirVeiculo();
+
 
     }
 
