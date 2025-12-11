@@ -8,3 +8,6 @@ https://drive.google.com/file/d/1EfDNFUsmzCBv3ODPwSlLSt4x6j9m5P1K/view?usp=shari
 
 PacketTracer
 https://drive.google.com/file/d/1-DWpuKFhNA0KqNL2hrAkXU2Yr_8x5oZt/view?usp=sharing
+
+FIGMA SISTEMA:
+https://www.figma.com/design/wyyPwwBRbz1xJv3svy8tgv/Alta-Fidelidade---Projeto-Integrador?node-id=0-1&t=DtwVuhxDTllVIjyW-1
