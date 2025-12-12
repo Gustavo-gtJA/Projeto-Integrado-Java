@@ -18,3 +18,6 @@ https://github.com/Gustavo-gtJA/Projeto-Integrador
 
 Figma página Web
 https://www.figma.com/design/FrANVDtxkhl1zzLHrURFbo/Sem-t%C3%ADtulo?node-id=0-1&t=iq8mRfo27y2CflAa-1
+
+Gustavo Vitor
+https://github.com/CubicNostalgia/Projeto-Integrado-Java
