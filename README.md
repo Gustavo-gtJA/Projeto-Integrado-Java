@@ -1,6 +1,6 @@
 # Projeto-Integrado-Java
 
-Requisitos Gustavo Teixeira / Gustavo Vitor
+Requisitos - Gustavo Teixeira / Gustavo Vitor
 https://docs.google.com/spreadsheets/d/1fpbgcQNcR0x18EM1p0_W3T6nmyyHZjQs/edit?usp=sharing&ouid=106786882505252092838&rtpof=true&sd=true
 
 Casos de Uso - Gustavo Teixeira
