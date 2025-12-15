@@ -13,10 +13,10 @@ FIGMA SISTEMA - Gustavo Teixeira / Gustavo Vitor
 https://www.figma.com/design/wyyPwwBRbz1xJv3svy8tgv/Alta-Fidelidade---Projeto-Integrador?node-id=0-1&t=DtwVuhxDTllVIjyW-1
 
 
-Página Web - Pedro
+Página Web - Pedro Rodriguez
 https://github.com/Gustavo-gtJA/Projeto-Integrador
 
-Figma página Web - Pedro
+Figma página Web - Pedro Rodriguez
 https://www.figma.com/design/FrANVDtxkhl1zzLHrURFbo/Sem-t%C3%ADtulo?node-id=0-1&t=iq8mRfo27y2CflAa-1
 
 Java - Gustavo Vitor
