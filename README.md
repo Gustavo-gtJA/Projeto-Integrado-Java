@@ -102,7 +102,7 @@ Projeto-Integrado-Java
 4. Execute:
 
    ```
-   Launcher.java
+   HelloApplication.java
    ```
 
 ---
@@ -145,7 +145,7 @@ Projeto-Integrado-Java
 
 Projeto desenvolvido com fins **educacionais**, integrando conceitos de:
 
-* Programação Orientada a Objetos
+* Lógica Programação Orientada a Objetos
 * Interface gráfica
 * Persistência de dados
 * Versionamento com Git
